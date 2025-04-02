@@ -2,6 +2,10 @@
 Content Update(s):
 - Human LV epicardial and endocardial models (TenTusscher-2004) have been added to MANTA
 
+# Version 1.1.6
+Technical Update:
+- Matplotlib backend updated from backend_qt4agg to backend_qt5agg
+
 # Version 1.1.5
 Technical Update(s):
 - Bugfix to crash if APD not found

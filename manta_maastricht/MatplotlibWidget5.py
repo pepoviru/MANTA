@@ -13,20 +13,20 @@ Derived from 'embedding_in_pyqt4.py':
 Copyright © 2005 Florent Rougon, 2006 Darren Dale
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 from PyQt5.QtWidgets import QSizePolicy
 from PyQt5.QtCore import QSize
 
 
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as Canvas
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as Canvas
 
 from matplotlib.figure import Figure
 
 
 from matplotlib import rcParams
 
-rcParams['font.size'] = 9
+rcParams["font.size"] = 9
 
 
 class MatplotlibWidget(Canvas):
@@ -62,9 +62,22 @@ class MatplotlibWidget(Canvas):
     self.widget.axes.plot(x, x**2)
     self.wdiget.axes.plot(x, x**3)
     """
-    def __init__(self, parent=None, title='', xlabel='', ylabel='',
-                 xlim=None, ylim=None, xscale='linear', yscale='linear',
-                 width=4, height=3, dpi=100, hold=False):
+
+    def __init__(
+        self,
+        parent=None,
+        title="",
+        xlabel="",
+        ylabel="",
+        xlim=None,
+        ylim=None,
+        xscale="linear",
+        yscale="linear",
+        width=4,
+        height=3,
+        dpi=100,
+        hold=False,
+    ):
         self.figure = Figure(figsize=(width, height), dpi=dpi)
         self.axes = self.figure.add_subplot(111)
         self.axes.set_title(title)
@@ -78,7 +91,7 @@ class MatplotlibWidget(Canvas):
             self.axes.set_xlim(*xlim)
         if ylim is not None:
             self.axes.set_ylim(*ylim)
-        #self.axes.hold(hold)
+        # self.axes.hold(hold)
 
         Canvas.__init__(self, self.figure)
         self.setParent(parent)
@@ -94,24 +107,26 @@ class MatplotlibWidget(Canvas):
         return QSize(10, 10)
 
 
-
-#===============================================================================
+# ===============================================================================
 #   Example
-#===============================================================================
-if __name__ == '__main__':
+# ===============================================================================
+if __name__ == "__main__":
     import sys
 
     from PyQt5.QtGui import QMainWindow, QApplication
     from numpy import linspace
 
-
     class ApplicationWindow(QMainWindow):
         def __init__(self):
             QMainWindow.__init__(self)
-            self.mplwidget = MatplotlibWidget(self, title='Example',
-                                              xlabel='Linear scale',
-                                              ylabel='Log scale',
-                                              hold=True, yscale='log')
+            self.mplwidget = MatplotlibWidget(
+                self,
+                title="Example",
+                xlabel="Linear scale",
+                ylabel="Log scale",
+                hold=True,
+                yscale="log",
+            )
             self.mplwidget.setFocus()
             self.setCentralWidget(self.mplwidget)
             self.plot(self.mplwidget.axes)

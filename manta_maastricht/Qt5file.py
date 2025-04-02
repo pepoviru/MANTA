@@ -9,28 +9,41 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1853, 980)
         icon = QtGui.QIcon()
         iconDir = os.path.dirname(os.path.abspath(__file__))
-        icon.addPixmap(QtGui.QPixmap(iconDir + os.path.sep + 'MANTA_icon.ico'), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap(iconDir + os.path.sep + "MANTA_icon.ico"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.centralwidget.sizePolicy().hasHeightForWidth()
+        )
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.frameControls = QtWidgets.QFrame(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.frameControls.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.frameControls.sizePolicy().hasHeightForWidth()
+        )
         self.frameControls.setSizePolicy(sizePolicy)
         self.frameControls.setMinimumSize(QtCore.QSize(350, 0))
         self.frameControls.setAutoFillBackground(False)
@@ -48,7 +61,9 @@ class Ui_MainWindow(object):
         self.gridLayout_16.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_16.setObjectName("gridLayout_16")
         self.lblAADInfo_3 = QtWidgets.QLabel(self.tab_5)
-        self.lblAADInfo_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lblAADInfo_3.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lblAADInfo_3.setObjectName("lblAADInfo_3")
         self.gridLayout_16.addWidget(self.lblAADInfo_3, 1, 0, 1, 2)
         self.gridLayout_2 = QtWidgets.QGridLayout()
@@ -80,7 +95,9 @@ class Ui_MainWindow(object):
         self.aadc1 = QtWidgets.QLabel(self.tab_5)
         self.aadc1.setObjectName("aadc1")
         self.gridLayout_16.addWidget(self.aadc1, 1, 2, 1, 1)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        spacerItem = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed
+        )
         self.gridLayout_16.addItem(spacerItem, 3, 0, 1, 1)
         self.label_24 = QtWidgets.QLabel(self.tab_5)
         font = QtGui.QFont()
@@ -91,7 +108,9 @@ class Ui_MainWindow(object):
         self.label_24.setObjectName("label_24")
         self.gridLayout_16.addWidget(self.label_24, 4, 0, 1, 1)
         self.lblAADInfo = QtWidgets.QLabel(self.tab_5)
-        self.lblAADInfo.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lblAADInfo.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lblAADInfo.setObjectName("lblAADInfo")
         self.gridLayout_16.addWidget(self.lblAADInfo, 2, 0, 1, 1)
         self.gridLayout = QtWidgets.QGridLayout()
@@ -101,7 +120,9 @@ class Ui_MainWindow(object):
         self.label100Percent_7.setObjectName("label100Percent_7")
         self.gridLayout.addWidget(self.label100Percent_7, 11, 2, 1, 1)
         self.lblINaK = QtWidgets.QLabel(self.tab_5)
-        self.lblINaK.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINaK.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINaK.setObjectName("lblINaK")
         self.gridLayout.addWidget(self.lblINaK, 10, 0, 1, 1)
         self.slideIKur = QtWidgets.QSlider(self.tab_5)
@@ -121,7 +142,9 @@ class Ui_MainWindow(object):
         self.spinIKur.setObjectName("spinIKur")
         self.gridLayout.addWidget(self.spinIKur, 4, 3, 1, 1)
         self.lblIKur = QtWidgets.QLabel(self.tab_5)
-        self.lblIKur.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIKur.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIKur.setObjectName("lblIKur")
         self.gridLayout.addWidget(self.lblIKur, 4, 0, 1, 1)
         self.label100Percent_9 = QtWidgets.QLabel(self.tab_5)
@@ -153,7 +176,9 @@ class Ui_MainWindow(object):
         self.label100Percent.setObjectName("label100Percent")
         self.gridLayout.addWidget(self.label100Percent, 6, 2, 1, 1)
         self.lblINCX = QtWidgets.QLabel(self.tab_5)
-        self.lblINCX.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINCX.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINCX.setObjectName("lblINCX")
         self.gridLayout.addWidget(self.lblINCX, 11, 0, 1, 1)
         self.spinINCX = QtWidgets.QSpinBox(self.tab_5)
@@ -178,11 +203,15 @@ class Ui_MainWindow(object):
         self.label100Percent_8.setObjectName("label100Percent_8")
         self.gridLayout.addWidget(self.label100Percent_8, 4, 2, 1, 1)
         self.lblINa = QtWidgets.QLabel(self.tab_5)
-        self.lblINa.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINa.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINa.setObjectName("lblINa")
         self.gridLayout.addWidget(self.lblINa, 6, 0, 1, 1)
         self.lblIto = QtWidgets.QLabel(self.tab_5)
-        self.lblIto.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIto.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIto.setObjectName("lblIto")
         self.gridLayout.addWidget(self.lblIto, 12, 0, 1, 1)
         self.slideINCX = QtWidgets.QSlider(self.tab_5)
@@ -218,7 +247,9 @@ class Ui_MainWindow(object):
         self.label100Percent_3.setObjectName("label100Percent_3")
         self.gridLayout.addWidget(self.label100Percent_3, 3, 2, 1, 1)
         self.lblINaL = QtWidgets.QLabel(self.tab_5)
-        self.lblINaL.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINaL.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINaL.setObjectName("lblINaL")
         self.gridLayout.addWidget(self.lblINaL, 8, 0, 1, 1)
         self.spinIKr = QtWidgets.QSpinBox(self.tab_5)
@@ -228,7 +259,9 @@ class Ui_MainWindow(object):
         self.spinIKr.setObjectName("spinIKr")
         self.gridLayout.addWidget(self.spinIKr, 2, 3, 1, 1)
         self.lblIKs = QtWidgets.QLabel(self.tab_5)
-        self.lblIKs.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIKs.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIKs.setObjectName("lblIKs")
         self.gridLayout.addWidget(self.lblIKs, 3, 0, 1, 1)
         self.slideINaL = QtWidgets.QSlider(self.tab_5)
@@ -273,7 +306,9 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.slideIK1, 1, 1, 1, 1)
         self.lblIK1 = QtWidgets.QLabel(self.tab_5)
         self.lblIK1.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.lblIK1.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIK1.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIK1.setObjectName("lblIK1")
         self.gridLayout.addWidget(self.lblIK1, 1, 0, 1, 1)
         self.slideICaL = QtWidgets.QSlider(self.tab_5)
@@ -310,7 +345,9 @@ class Ui_MainWindow(object):
         self.spinICaL.setObjectName("spinICaL")
         self.gridLayout.addWidget(self.spinICaL, 0, 3, 1, 1)
         self.lblIKr = QtWidgets.QLabel(self.tab_5)
-        self.lblIKr.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIKr.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIKr.setObjectName("lblIKr")
         self.gridLayout.addWidget(self.lblIKr, 2, 0, 1, 1)
         self.label100Percent_5 = QtWidgets.QLabel(self.tab_5)
@@ -337,11 +374,15 @@ class Ui_MainWindow(object):
         self.ina_block1.setAutoFillBackground(False)
         self.ina_block1.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.ina_block1.setFrameShape(QtWidgets.QFrame.Panel)
-        self.ina_block1.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.ina_block1.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.ina_block1.setObjectName("ina_block1")
         self.gridLayout.addWidget(self.ina_block1, 7, 3, 1, 1)
         self.gridLayout_16.addLayout(self.gridLayout, 5, 0, 1, 3)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem1 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_16.addItem(spacerItem1, 6, 0, 1, 3)
         self.er1 = QtWidgets.QLabel(self.tab_5)
         self.er1.setObjectName("er1")
@@ -379,17 +420,23 @@ class Ui_MainWindow(object):
         self.gridLayout_6.addWidget(self.spinAADConcentration_3, 1, 2, 1, 1)
         self.gridLayout_17.addLayout(self.gridLayout_6, 0, 0, 1, 3)
         self.lblAADInfo_4 = QtWidgets.QLabel(self.tab_9)
-        self.lblAADInfo_4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lblAADInfo_4.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lblAADInfo_4.setObjectName("lblAADInfo_4")
         self.gridLayout_17.addWidget(self.lblAADInfo_4, 1, 0, 1, 2)
         self.aadc2 = QtWidgets.QLabel(self.tab_9)
         self.aadc2.setObjectName("aadc2")
         self.gridLayout_17.addWidget(self.aadc2, 1, 2, 1, 1)
         self.lblAADInfo_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblAADInfo_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lblAADInfo_2.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lblAADInfo_2.setObjectName("lblAADInfo_2")
         self.gridLayout_17.addWidget(self.lblAADInfo_2, 2, 0, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        spacerItem2 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed
+        )
         self.gridLayout_17.addItem(spacerItem2, 3, 0, 1, 1)
         self.label_25 = QtWidgets.QLabel(self.tab_9)
         font = QtGui.QFont()
@@ -422,11 +469,15 @@ class Ui_MainWindow(object):
         self.spinINaK_2.setObjectName("spinINaK_2")
         self.gridLayout_5.addWidget(self.spinINaK_2, 8, 3, 1, 1)
         self.lblINa_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblINa_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINa_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINa_2.setObjectName("lblINa_2")
         self.gridLayout_5.addWidget(self.lblINa_2, 5, 0, 1, 1)
         self.lblIKur_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblIKur_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIKur_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIKur_2.setObjectName("lblIKur_2")
         self.gridLayout_5.addWidget(self.lblIKur_2, 4, 0, 1, 1)
         self.spinIKs_2 = QtWidgets.QSpinBox(self.tab_9)
@@ -436,7 +487,9 @@ class Ui_MainWindow(object):
         self.spinIKs_2.setObjectName("spinIKs_2")
         self.gridLayout_5.addWidget(self.spinIKs_2, 3, 3, 1, 1)
         self.lblINCX_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblINCX_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINCX_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINCX_2.setObjectName("lblINCX_2")
         self.gridLayout_5.addWidget(self.lblINCX_2, 9, 0, 1, 1)
         self.slideINCX_2 = QtWidgets.QSlider(self.tab_9)
@@ -453,7 +506,9 @@ class Ui_MainWindow(object):
         self.label100Percent_20.setObjectName("label100Percent_20")
         self.gridLayout_5.addWidget(self.label100Percent_20, 9, 2, 1, 1)
         self.lblINaK_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblINaK_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINaK_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINaK_2.setObjectName("lblINaK_2")
         self.gridLayout_5.addWidget(self.lblINaK_2, 8, 0, 1, 1)
         self.slideIKur_2 = QtWidgets.QSlider(self.tab_9)
@@ -517,7 +572,9 @@ class Ui_MainWindow(object):
         self.spinIto_2.setObjectName("spinIto_2")
         self.gridLayout_5.addWidget(self.spinIto_2, 10, 3, 1, 1)
         self.lblIKr_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblIKr_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIKr_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIKr_2.setObjectName("lblIKr_2")
         self.gridLayout_5.addWidget(self.lblIKr_2, 2, 0, 1, 1)
         self.slideINaL_2 = QtWidgets.QSlider(self.tab_9)
@@ -577,14 +634,18 @@ class Ui_MainWindow(object):
         self.slideIto_2.setObjectName("slideIto_2")
         self.gridLayout_5.addWidget(self.slideIto_2, 10, 1, 1, 1)
         self.lblINaL_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblINaL_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblINaL_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblINaL_2.setObjectName("lblINaL_2")
         self.gridLayout_5.addWidget(self.lblINaL_2, 7, 0, 1, 1)
         self.label100Percent_14 = QtWidgets.QLabel(self.tab_9)
         self.label100Percent_14.setObjectName("label100Percent_14")
         self.gridLayout_5.addWidget(self.label100Percent_14, 5, 2, 1, 1)
         self.lblIto_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblIto_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIto_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIto_2.setObjectName("lblIto_2")
         self.gridLayout_5.addWidget(self.lblIto_2, 10, 0, 1, 1)
         self.label100Percent_13 = QtWidgets.QLabel(self.tab_9)
@@ -613,7 +674,9 @@ class Ui_MainWindow(object):
         self.gridLayout_5.addWidget(self.spinINCX_2, 9, 3, 1, 1)
         self.lblIK1_2 = QtWidgets.QLabel(self.tab_9)
         self.lblIK1_2.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.lblIK1_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIK1_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIK1_2.setObjectName("lblIK1_2")
         self.gridLayout_5.addWidget(self.lblIK1_2, 1, 0, 1, 1)
         self.markov_2 = QtWidgets.QCheckBox(self.tab_9)
@@ -625,7 +688,9 @@ class Ui_MainWindow(object):
         self.ina_block2.setAutoFillBackground(False)
         self.ina_block2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.ina_block2.setFrameShape(QtWidgets.QFrame.Panel)
-        self.ina_block2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.ina_block2.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.ina_block2.setObjectName("ina_block2")
         self.gridLayout_5.addWidget(self.ina_block2, 6, 3, 1, 1)
         self.lblICaL_2 = QtWidgets.QLabel(self.tab_9)
@@ -639,7 +704,9 @@ class Ui_MainWindow(object):
         self.label100Percent_18.setObjectName("label100Percent_18")
         self.gridLayout_5.addWidget(self.label100Percent_18, 8, 2, 1, 1)
         self.lblIKs_2 = QtWidgets.QLabel(self.tab_9)
-        self.lblIKs_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lblIKs_2.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lblIKs_2.setObjectName("lblIKs_2")
         self.gridLayout_5.addWidget(self.lblIKs_2, 3, 0, 1, 1)
         self.label100Percent_16 = QtWidgets.QLabel(self.tab_9)
@@ -649,19 +716,27 @@ class Ui_MainWindow(object):
         self.er2 = QtWidgets.QLabel(self.tab_9)
         self.er2.setObjectName("er2")
         self.gridLayout_17.addWidget(self.er2, 2, 2, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem3 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_17.addItem(spacerItem3, 6, 0, 1, 3)
         self.tabGeneral.addTab(self.tab_9, "")
         self.tab_6 = QtWidgets.QWidget()
         self.tab_6.setObjectName("tab_6")
         self.formLayout = QtWidgets.QFormLayout(self.tab_6)
-        self.formLayout.setFieldGrowthPolicy(QtWidgets.QFormLayout.AllNonFixedFieldsGrow)
+        self.formLayout.setFieldGrowthPolicy(
+            QtWidgets.QFormLayout.AllNonFixedFieldsGrow
+        )
         self.formLayout.setContentsMargins(0, 0, 0, 0)
         self.formLayout.setObjectName("formLayout")
         self.chkEqualYAxis = QtWidgets.QCheckBox(self.tab_6)
         self.chkEqualYAxis.setObjectName("chkEqualYAxis")
-        self.formLayout.setWidget(0, QtWidgets.QFormLayout.SpanningRole, self.chkEqualYAxis)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setWidget(
+            0, QtWidgets.QFormLayout.SpanningRole, self.chkEqualYAxis
+        )
+        spacerItem4 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.formLayout.setItem(2, QtWidgets.QFormLayout.LabelRole, spacerItem4)
         self.label_17 = QtWidgets.QLabel(self.tab_6)
         font = QtGui.QFont()
@@ -684,7 +759,9 @@ class Ui_MainWindow(object):
         self.xaxis_mdl1_from = QtWidgets.QDoubleSpinBox(self.tab_6)
         self.xaxis_mdl1_from.setMaximum(9999.0)
         self.xaxis_mdl1_from.setObjectName("xaxis_mdl1_from")
-        self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl1_from)
+        self.formLayout.setWidget(
+            5, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl1_from
+        )
         self.label_20 = QtWidgets.QLabel(self.tab_6)
         self.label_20.setObjectName("label_20")
         self.formLayout.setWidget(7, QtWidgets.QFormLayout.LabelRole, self.label_20)
@@ -692,7 +769,9 @@ class Ui_MainWindow(object):
         self.xaxis_mdl1_to.setMaximum(999999.0)
         self.xaxis_mdl1_to.setProperty("value", 1000.0)
         self.xaxis_mdl1_to.setObjectName("xaxis_mdl1_to")
-        self.formLayout.setWidget(7, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl1_to)
+        self.formLayout.setWidget(
+            7, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl1_to
+        )
         self.label_21 = QtWidgets.QLabel(self.tab_6)
         font = QtGui.QFont()
         font.setBold(True)
@@ -706,7 +785,9 @@ class Ui_MainWindow(object):
         self.xaxis_mdl2_from = QtWidgets.QDoubleSpinBox(self.tab_6)
         self.xaxis_mdl2_from.setMaximum(9999.0)
         self.xaxis_mdl2_from.setObjectName("xaxis_mdl2_from")
-        self.formLayout.setWidget(9, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl2_from)
+        self.formLayout.setWidget(
+            9, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl2_from
+        )
         self.label_23 = QtWidgets.QLabel(self.tab_6)
         self.label_23.setObjectName("label_23")
         self.formLayout.setWidget(11, QtWidgets.QFormLayout.LabelRole, self.label_23)
@@ -714,15 +795,21 @@ class Ui_MainWindow(object):
         self.xaxis_mdl2_to.setMaximum(999999.0)
         self.xaxis_mdl2_to.setProperty("value", 1000.0)
         self.xaxis_mdl2_to.setObjectName("xaxis_mdl2_to")
-        self.formLayout.setWidget(11, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl2_to)
+        self.formLayout.setWidget(
+            11, QtWidgets.QFormLayout.FieldRole, self.xaxis_mdl2_to
+        )
         self.resetaxes_button = QtWidgets.QPushButton(self.tab_6)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.resetaxes_button.setFont(font)
         self.resetaxes_button.setObjectName("resetaxes_button")
-        self.formLayout.setWidget(12, QtWidgets.QFormLayout.SpanningRole, self.resetaxes_button)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setWidget(
+            12, QtWidgets.QFormLayout.SpanningRole, self.resetaxes_button
+        )
+        spacerItem5 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.formLayout.setItem(13, QtWidgets.QFormLayout.FieldRole, spacerItem5)
         self.tabGeneral.addTab(self.tab_6, "")
         self.tab_10 = QtWidgets.QWidget()
@@ -813,7 +900,9 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_30.setFont(font)
-        self.label_30.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_30.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.label_30.setObjectName("label_30")
         self.gridLayout_14.addWidget(self.label_30, 2, 0, 1, 1)
         self.label_29 = QtWidgets.QLabel(self.tab_10)
@@ -1127,9 +1216,13 @@ class Ui_MainWindow(object):
         self.ic50_aad2_lbl.setAlignment(QtCore.Qt.AlignCenter)
         self.ic50_aad2_lbl.setObjectName("ic50_aad2_lbl")
         self.gridLayout_14.addWidget(self.ic50_aad2_lbl, 15, 1, 1, 2)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem6 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_14.addItem(spacerItem6, 14, 1, 1, 1)
-        spacerItem7 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem7 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_14.addItem(spacerItem7, 27, 1, 1, 1)
         self.label_28 = QtWidgets.QLabel(self.tab_10)
         font = QtGui.QFont()
@@ -1158,7 +1251,7 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(self.frameControls)
         self.label_2.setText("")
         logoDir = os.path.dirname(os.path.abspath(__file__))
-        self.label_2.setPixmap(QtGui.QPixmap(logoDir + os.path.sep +'MANTA_res1.png'))   
+        self.label_2.setPixmap(QtGui.QPixmap(logoDir + os.path.sep + "MANTA_res1.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setWordWrap(False)
@@ -1174,7 +1267,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.label)
         self.gridLayout_3.addWidget(self.frameControls, 0, 0, 1, 1)
         self.frameOutput1 = QtWidgets.QFrame(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frameOutput1.sizePolicy().hasHeightForWidth())
@@ -1306,11 +1401,17 @@ class Ui_MainWindow(object):
         self.gridLayout_8 = QtWidgets.QGridLayout(self.tab_2)
         self.gridLayout_8.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_8.setObjectName("gridLayout_8")
-        spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem8 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem8, 21, 0, 1, 1)
-        spacerItem9 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem9 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem9, 22, 0, 1, 1)
-        spacerItem10 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem10 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem10, 8, 0, 1, 1)
         self.label_3 = QtWidgets.QLabel(self.tab_2)
         font = QtGui.QFont()
@@ -1324,7 +1425,9 @@ class Ui_MainWindow(object):
         self.txtS1S2IntervalsModel1 = QtWidgets.QLineEdit(self.tab_2)
         self.txtS1S2IntervalsModel1.setObjectName("txtS1S2IntervalsModel1")
         self.gridLayout_8.addWidget(self.txtS1S2IntervalsModel1, 11, 3, 1, 1)
-        spacerItem11 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem11 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem11, 13, 1, 1, 1)
         self.lblShowbeats1 = QtWidgets.QLabel(self.tab_2)
         self.lblShowbeats1.setObjectName("lblShowbeats1")
@@ -1411,12 +1514,16 @@ class Ui_MainWindow(object):
         self.spinShowbeatsModel1.setProperty("value", 3)
         self.spinShowbeatsModel1.setObjectName("spinShowbeatsModel1")
         self.gridLayout_8.addWidget(self.spinShowbeatsModel1, 7, 3, 1, 1)
-        spacerItem12 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem12 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem12, 23, 0, 1, 1)
         self.txtRateModel1 = QtWidgets.QLineEdit(self.tab_2)
         self.txtRateModel1.setObjectName("txtRateModel1")
         self.gridLayout_8.addWidget(self.txtRateModel1, 1, 3, 1, 1)
-        spacerItem13 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem13 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem13, 20, 0, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.tab_2)
         font = QtGui.QFont()
@@ -1424,9 +1531,13 @@ class Ui_MainWindow(object):
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.gridLayout_8.addWidget(self.label_5, 12, 3, 1, 1)
-        spacerItem14 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem14 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem14, 19, 0, 1, 1)
-        spacerItem15 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem15 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_8.addItem(spacerItem15, 18, 0, 1, 1)
         self.s1s2plot_ref1.addTab(self.tab_2, "")
         self.tab_7 = QtWidgets.QWidget()
@@ -1459,14 +1570,16 @@ class Ui_MainWindow(object):
         font.setItalic(True)
         font.setWeight(50)
         self.label_14.setFont(font)
-        self.label_14.setAlignment(QtCore.Qt.AlignJustify|QtCore.Qt.AlignVCenter)
+        self.label_14.setAlignment(QtCore.Qt.AlignJustify | QtCore.Qt.AlignVCenter)
         self.label_14.setWordWrap(True)
         self.label_14.setObjectName("label_14")
         self.verticalLayout_12.addWidget(self.label_14)
         self.label_26 = QtWidgets.QLabel(self.tab_7)
         self.label_26.setObjectName("label_26")
         self.verticalLayout_12.addWidget(self.label_26)
-        spacerItem16 = QtWidgets.QSpacerItem(20, 125, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem16 = QtWidgets.QSpacerItem(
+            20, 125, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.verticalLayout_12.addItem(spacerItem16)
         self.label_9 = QtWidgets.QLabel(self.tab_7)
         font = QtGui.QFont()
@@ -1555,7 +1668,9 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addLayout(self.gridLayout_11, 0, 0, 1, 1)
         self.tabWidget_2.addTab(self.tabWidget_2Page1, "")
         self.gridLayout_13.addWidget(self.tabWidget_2, 4, 0, 1, 8)
-        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem17 = QtWidgets.QSpacerItem(
+            40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
+        )
         self.gridLayout_13.addItem(spacerItem17, 0, 1, 1, 1)
         self.cmbOutput2Top = QtWidgets.QComboBox(self.tab_3)
         self.cmbOutput2Top.setMinimumSize(QtCore.QSize(450, 0))
@@ -1658,7 +1773,9 @@ class Ui_MainWindow(object):
         self.spinCao2.setProperty("value", 1.8)
         self.spinCao2.setObjectName("spinCao2")
         self.gridLayout_9.addWidget(self.spinCao2, 13, 2, 1, 1)
-        spacerItem18 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem18 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem18, 11, 1, 1, 1)
         self.spinStimAmp2 = QtWidgets.QSpinBox(self.tab_4)
         self.spinStimAmp2.setMaximum(1000)
@@ -1696,7 +1813,9 @@ class Ui_MainWindow(object):
         self.lblKo2 = QtWidgets.QLabel(self.tab_4)
         self.lblKo2.setObjectName("lblKo2")
         self.gridLayout_9.addWidget(self.lblKo2, 14, 0, 1, 1)
-        spacerItem19 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem19 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem19, 21, 0, 1, 1)
         self.lblShowbeats2 = QtWidgets.QLabel(self.tab_4)
         self.lblShowbeats2.setObjectName("lblShowbeats2")
@@ -1707,7 +1826,9 @@ class Ui_MainWindow(object):
         self.label_7 = QtWidgets.QLabel(self.tab_4)
         self.label_7.setObjectName("label_7")
         self.gridLayout_9.addWidget(self.label_7, 9, 0, 1, 1)
-        spacerItem20 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem20 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem20, 7, 0, 1, 1)
         self.txtS1S2IntervalsModel2 = QtWidgets.QLineEdit(self.tab_4)
         self.txtS1S2IntervalsModel2.setObjectName("txtS1S2IntervalsModel2")
@@ -1718,7 +1839,9 @@ class Ui_MainWindow(object):
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.gridLayout_9.addWidget(self.label_6, 2, 2, 1, 1)
-        spacerItem21 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem21 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem21, 19, 0, 1, 1)
         self.label_8 = QtWidgets.QLabel(self.tab_4)
         font = QtGui.QFont()
@@ -1726,13 +1849,21 @@ class Ui_MainWindow(object):
         self.label_8.setFont(font)
         self.label_8.setObjectName("label_8")
         self.gridLayout_9.addWidget(self.label_8, 10, 2, 1, 1)
-        spacerItem22 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem22 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem22, 18, 0, 1, 1)
-        spacerItem23 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem23 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem23, 20, 0, 1, 1)
-        spacerItem24 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem24 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem24, 17, 0, 1, 1)
-        spacerItem25 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem25 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.gridLayout_9.addItem(spacerItem25, 16, 0, 1, 1)
         self.tabWidgetModel2.addTab(self.tab_4, "")
         self.tab_8 = QtWidgets.QWidget()
@@ -1763,14 +1894,16 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setItalic(True)
         self.label_16.setFont(font)
-        self.label_16.setAlignment(QtCore.Qt.AlignJustify|QtCore.Qt.AlignVCenter)
+        self.label_16.setAlignment(QtCore.Qt.AlignJustify | QtCore.Qt.AlignVCenter)
         self.label_16.setWordWrap(True)
         self.label_16.setObjectName("label_16")
         self.verticalLayout_13.addWidget(self.label_16)
         self.label_27 = QtWidgets.QLabel(self.tab_8)
         self.label_27.setObjectName("label_27")
         self.verticalLayout_13.addWidget(self.label_27)
-        spacerItem26 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        spacerItem26 = QtWidgets.QSpacerItem(
+            20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding
+        )
         self.verticalLayout_13.addItem(spacerItem26)
         self.label_10 = QtWidgets.QLabel(self.tab_8)
         font = QtGui.QFont()
@@ -1809,25 +1942,39 @@ class Ui_MainWindow(object):
         self.tabWidget.setCurrentIndex(0)
         self.tabWidgetModel2.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
-        self.slideIto.valueChanged['int'].connect(self.spinIto.setValue)
-        self.slideICaL.valueChanged['int'].connect(self.spinICaL.setValue)
-        self.slideIKur.valueChanged['int'].connect(self.spinIKur.setValue)
-        self.slideINaK.valueChanged['int'].connect(self.spinINaK.setValue)
-        self.slideIK1.valueChanged['int'].connect(self.spinIK1.setValue)
-        self.slideIKr.valueChanged['int'].connect(self.spinIKr.setValue)
-        self.slideIKs.valueChanged['int'].connect(self.spinIKs.setValue)
-        self.slideINCX.valueChanged['int'].connect(self.spinINCX.setValue)
-        self.slideINaL.valueChanged['int'].connect(self.spinINaL.setValue)
-        self.slideINa.valueChanged['int'].connect(self.spinINa.setValue)
+        self.slideIto.valueChanged["int"].connect(self.spinIto.setValue)
+        self.slideICaL.valueChanged["int"].connect(self.spinICaL.setValue)
+        self.slideIKur.valueChanged["int"].connect(self.spinIKur.setValue)
+        self.slideINaK.valueChanged["int"].connect(self.spinINaK.setValue)
+        self.slideIK1.valueChanged["int"].connect(self.spinIK1.setValue)
+        self.slideIKr.valueChanged["int"].connect(self.spinIKr.setValue)
+        self.slideIKs.valueChanged["int"].connect(self.spinIKs.setValue)
+        self.slideINCX.valueChanged["int"].connect(self.spinINCX.setValue)
+        self.slideINaL.valueChanged["int"].connect(self.spinINaL.setValue)
+        self.slideINa.valueChanged["int"].connect(self.spinINa.setValue)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MANTA (Maastricht Antiarrhythmic Drug Evaluator)"))
-        self.lblAADInfo_3.setToolTip(_translate("MainWindow", "<html><head/><body><p><img src=\":/AAD class/AADClass_v2resized.png\"/></p></body></html>"))
-        self.lblAADInfo_3.setText(_translate("MainWindow", "Antiarrhythmic drug class:"))
+        MainWindow.setWindowTitle(
+            _translate("MainWindow", "MANTA (Maastricht Antiarrhythmic Drug Evaluator)")
+        )
+        self.lblAADInfo_3.setToolTip(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p><img src=":/AAD class/AADClass_v2resized.png"/></p></body></html>',
+            )
+        )
+        self.lblAADInfo_3.setText(
+            _translate("MainWindow", "Antiarrhythmic drug class:")
+        )
         self.lblAAD.setText(_translate("MainWindow", "AAD: "))
-        self.lblConcentration.setText(_translate("MainWindow", "<html><head/><body><p>Concentration (&mu;M): </p></body></html>"))
+        self.lblConcentration.setText(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Concentration (&mu;M): </p></body></html>",
+            )
+        )
         self.aadc1.setText(_translate("MainWindow", "N/A"))
         self.label_24.setText(_translate("MainWindow", "Ion channel block:"))
         self.lblAADInfo.setText(_translate("MainWindow", "Effective range:"))
@@ -1854,11 +2001,25 @@ class Ui_MainWindow(object):
         self.markov_1.setText(_translate("MainWindow", "State-dependent INa"))
         self.ina_block1.setText(_translate("MainWindow", "0"))
         self.er1.setText(_translate("MainWindow", "N/A"))
-        self.tabGeneral.setTabText(self.tabGeneral.indexOf(self.tab_5), _translate("MainWindow", "AAD[1]"))
+        self.tabGeneral.setTabText(
+            self.tabGeneral.indexOf(self.tab_5), _translate("MainWindow", "AAD[1]")
+        )
         self.lblAAD_3.setText(_translate("MainWindow", "AAD: "))
-        self.lblConcentration_3.setText(_translate("MainWindow", "<html><head/><body><p>Concentration (&mu;M): </p></body></html>"))
-        self.lblAADInfo_4.setToolTip(_translate("MainWindow", "<html><head/><body><p><img src=\":/AAD class/AADClass_v2resized.png\"/></p></body></html>"))
-        self.lblAADInfo_4.setText(_translate("MainWindow", "Antiarrhythmic drug class:"))
+        self.lblConcentration_3.setText(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Concentration (&mu;M): </p></body></html>",
+            )
+        )
+        self.lblAADInfo_4.setToolTip(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p><img src=":/AAD class/AADClass_v2resized.png"/></p></body></html>',
+            )
+        )
+        self.lblAADInfo_4.setText(
+            _translate("MainWindow", "Antiarrhythmic drug class:")
+        )
         self.aadc2.setText(_translate("MainWindow", "N/A"))
         self.lblAADInfo_2.setText(_translate("MainWindow", "Effective range:"))
         self.label_25.setText(_translate("MainWindow", "Ion channel block:"))
@@ -1885,8 +2046,12 @@ class Ui_MainWindow(object):
         self.lblIKs_2.setText(_translate("MainWindow", "IKs: -200%"))
         self.label100Percent_16.setText(_translate("MainWindow", "100%"))
         self.er2.setText(_translate("MainWindow", "N/A"))
-        self.tabGeneral.setTabText(self.tabGeneral.indexOf(self.tab_9), _translate("MainWindow", "AAD[2]"))
-        self.chkEqualYAxis.setText(_translate("MainWindow", "Link y-axes in both models"))
+        self.tabGeneral.setTabText(
+            self.tabGeneral.indexOf(self.tab_9), _translate("MainWindow", "AAD[2]")
+        )
+        self.chkEqualYAxis.setText(
+            _translate("MainWindow", "Link y-axes in both models")
+        )
         self.label_17.setText(_translate("MainWindow", "Set x-axes of:"))
         self.label_18.setText(_translate("MainWindow", "Model 1:"))
         self.label_19.setText(_translate("MainWindow", "From:"))
@@ -1895,7 +2060,9 @@ class Ui_MainWindow(object):
         self.label_22.setText(_translate("MainWindow", "From:"))
         self.label_23.setText(_translate("MainWindow", "To:"))
         self.resetaxes_button.setText(_translate("MainWindow", "Reset x-axes"))
-        self.tabGeneral.setTabText(self.tabGeneral.indexOf(self.tab_6), _translate("MainWindow", "Options"))
+        self.tabGeneral.setTabText(
+            self.tabGeneral.indexOf(self.tab_6), _translate("MainWindow", "Options")
+        )
         self.label_49.setText(_translate("MainWindow", "IKr"))
         self.label_51.setText(_translate("MainWindow", "IKur"))
         self.label_52.setText(_translate("MainWindow", "INa"))
@@ -1926,93 +2093,237 @@ class Ui_MainWindow(object):
         self.label_56.setText(_translate("MainWindow", "Ito"))
         self.ic50_aad1_lbl.setText(_translate("MainWindow", "=Custom="))
         self.ic50_aad2_lbl.setText(_translate("MainWindow", "=Custom="))
-        self.label_28.setText(_translate("MainWindow", "IC50 & Hill slope can be updated here:"))
-        self.tabGeneral.setTabText(self.tabGeneral.indexOf(self.tab_10), _translate("MainWindow", "IC50"))
+        self.label_28.setText(
+            _translate("MainWindow", "IC50 & Hill slope can be updated here:")
+        )
+        self.tabGeneral.setTabText(
+            self.tabGeneral.indexOf(self.tab_10), _translate("MainWindow", "IC50")
+        )
         self.cmdRun.setText(_translate("MainWindow", "Run"))
         self.cmdReset.setText(_translate("MainWindow", "Reset Values"))
-        self.label.setText(_translate("MainWindow", "v1.1.5 == Heijman\'s Lab == 2019"))
+        self.label.setText(
+            _translate("MainWindow", "v1.1.6 == Heijman's Lab - pepoviru == 2019-2025")
+        )
         self.lblModel1.setText(_translate("MainWindow", "Model:"))
         self.aad2_mdl1_bottom.setText(_translate("MainWindow", "AAD2"))
-        self.lblAPDCaTModel1Ctrl.setText(_translate("MainWindow", "REF - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"))
-        self.lblAPDCaTModel1Alt.setText(_translate("MainWindow", "AAD1 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"))
-        self.lblAPDCaTModel1Alt_2.setText(_translate("MainWindow", "AAD2 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Stimulus"))
+        self.lblAPDCaTModel1Ctrl.setText(
+            _translate(
+                "MainWindow", "REF - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"
+            )
+        )
+        self.lblAPDCaTModel1Alt.setText(
+            _translate(
+                "MainWindow",
+                "AAD1 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM",
+            )
+        )
+        self.lblAPDCaTModel1Alt_2.setText(
+            _translate(
+                "MainWindow",
+                "AAD2 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM",
+            )
+        )
+        self.tabWidget.setTabText(
+            self.tabWidget.indexOf(self.tabWidgetPage1),
+            _translate("MainWindow", "Stimulus"),
+        )
         self.aad1_mdl1_bottom.setText(_translate("MainWindow", "AAD1"))
         self.aad2_mdl1_top.setText(_translate("MainWindow", "AAD2"))
         self.aad1_mdl1_top.setText(_translate("MainWindow", "AAD1"))
         self.ref_mdl1_bottom.setText(_translate("MainWindow", "REF"))
         self.ref_mdl1_top.setText(_translate("MainWindow", "REF"))
-        self.s1s2plot_ref1.setTabText(self.s1s2plot_ref1.indexOf(self.tab), _translate("MainWindow", "Output"))
-        self.label_3.setText(_translate("MainWindow", "= Insert single value (60) or multiple values (60, 90, 120, 180, ...) ="))
+        self.s1s2plot_ref1.setTabText(
+            self.s1s2plot_ref1.indexOf(self.tab), _translate("MainWindow", "Output")
+        )
+        self.label_3.setText(
+            _translate(
+                "MainWindow",
+                "= Insert single value (60) or multiple values (60, 90, 120, 180, ...) =",
+            )
+        )
         self.label_4.setText(_translate("MainWindow", "S1S2 intervals (ms):"))
-        self.txtS1S2IntervalsModel1.setText(_translate("MainWindow", "100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,320,340,360,380,400,420,440,460,480,520,560"))
+        self.txtS1S2IntervalsModel1.setText(
+            _translate(
+                "MainWindow",
+                "100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,320,340,360,380,400,420,440,460,480,520,560",
+            )
+        )
         self.lblShowbeats1.setText(_translate("MainWindow", "Output (# beats):"))
         self.lblStimDur1.setText(_translate("MainWindow", "Duration (ms):"))
         self.lblStimAmp1.setText(_translate("MainWindow", "Amplitude (%):"))
         self.lblRate.setText(_translate("MainWindow", "Rate (bpm):"))
-        self.lblNao1.setText(_translate("MainWindow", "<html><head/><body><p>[Na<span style=\" vertical-align:super;\">+</span>] (mmol/l): </p></body></html>"))
-        self.lblCao1.setText(_translate("MainWindow", "<html><head/><body><p>[Ca<span style=\" vertical-align:super;\">2+</span>] (mmol/l):</p></body></html>"))
-        self.lblSettingsExtracellular1.setText(_translate("MainWindow", "Extracellular conditions:"))
-        self.lblSettingsStimulus1.setText(_translate("MainWindow", "Stimulus properties:"))
+        self.lblNao1.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p>[Na<span style=" vertical-align:super;">+</span>] (mmol/l): </p></body></html>',
+            )
+        )
+        self.lblCao1.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p>[Ca<span style=" vertical-align:super;">2+</span>] (mmol/l):</p></body></html>',
+            )
+        )
+        self.lblSettingsExtracellular1.setText(
+            _translate("MainWindow", "Extracellular conditions:")
+        )
+        self.lblSettingsStimulus1.setText(
+            _translate("MainWindow", "Stimulus properties:")
+        )
         self.lblPrepacing1.setText(_translate("MainWindow", "Prepacing (# beats):"))
         self.checks1s2_mdl1.setText(_translate("MainWindow", "Run S1S2 protocol"))
-        self.lblKo1.setText(_translate("MainWindow", "<html><head/><body><p>[K<span style=\" vertical-align:super;\">+</span>] (mmol/l):</p></body></html>"))
+        self.lblKo1.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p>[K<span style=" vertical-align:super;">+</span>] (mmol/l):</p></body></html>',
+            )
+        )
         self.txtRateModel1.setText(_translate("MainWindow", "60"))
-        self.label_5.setText(_translate("MainWindow", "= Insert multiple values (130, 140, 150, 200, 300, ...) ="))
-        self.s1s2plot_ref1.setTabText(self.s1s2plot_ref1.indexOf(self.tab_2), _translate("MainWindow", "Settings"))
-        self.label_11.setText(_translate("MainWindow", "Save generated plots into CSV file:"))
+        self.label_5.setText(
+            _translate(
+                "MainWindow",
+                "= Insert multiple values (130, 140, 150, 200, 300, ...) =",
+            )
+        )
+        self.s1s2plot_ref1.setTabText(
+            self.s1s2plot_ref1.indexOf(self.tab_2), _translate("MainWindow", "Settings")
+        )
+        self.label_11.setText(
+            _translate("MainWindow", "Save generated plots into CSV file:")
+        )
         self.export_1.setText(_translate("MainWindow", "Export Plot(s)"))
         self.label_13.setText(_translate("MainWindow", "Notes:"))
         self.label_14.setText(_translate("MainWindow", "Generated file is listed as: "))
-        self.label_26.setText(_translate("MainWindow", "Time // Reference // Time // AAD[1] // Time // AAD[2]"))
-        self.label_9.setText(_translate("MainWindow", "MANTA is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."))
-        self.s1s2plot_ref1.setTabText(self.s1s2plot_ref1.indexOf(self.tab_7), _translate("MainWindow", "Export"))
+        self.label_26.setText(
+            _translate(
+                "MainWindow", "Time // Reference // Time // AAD[1] // Time // AAD[2]"
+            )
+        )
+        self.label_9.setText(
+            _translate(
+                "MainWindow",
+                "MANTA is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+            )
+        )
+        self.s1s2plot_ref1.setTabText(
+            self.s1s2plot_ref1.indexOf(self.tab_7), _translate("MainWindow", "Export")
+        )
         self.lblModel2.setText(_translate("MainWindow", "Model:"))
         self.aad2_mdl2_bottom.setText(_translate("MainWindow", "AAD2"))
-        self.lblAPDCaTModel2Ctrl.setText(_translate("MainWindow", "REF - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"))
-        self.lblAPDCaTModel2Alt.setText(_translate("MainWindow", "AAD1 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"))
-        self.lblAPDCaTModel2Alt_2.setText(_translate("MainWindow", "AAD2 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tabWidget_2Page1), _translate("MainWindow", "Stimulus"))
+        self.lblAPDCaTModel2Ctrl.setText(
+            _translate(
+                "MainWindow", "REF - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM"
+            )
+        )
+        self.lblAPDCaTModel2Alt.setText(
+            _translate(
+                "MainWindow",
+                "AAD1 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM",
+            )
+        )
+        self.lblAPDCaTModel2Alt_2.setText(
+            _translate(
+                "MainWindow",
+                "AAD2 - APD: xxx ms // dV/dt_max: xxx mV/ms // CaT: xxx nM",
+            )
+        )
+        self.tabWidget_2.setTabText(
+            self.tabWidget_2.indexOf(self.tabWidget_2Page1),
+            _translate("MainWindow", "Stimulus"),
+        )
         self.aad2_mdl2_top.setText(_translate("MainWindow", "AAD2"))
         self.aad1_mdl2_top.setText(_translate("MainWindow", "AAD1"))
         self.ref_mdl2_top.setText(_translate("MainWindow", "REF"))
         self.aad1_mdl2_bottom.setText(_translate("MainWindow", "AAD1"))
         self.ref_mdl2_bottom.setText(_translate("MainWindow", "REF"))
-        self.tabWidgetModel2.setTabText(self.tabWidgetModel2.indexOf(self.tab_3), _translate("MainWindow", "Output"))
+        self.tabWidgetModel2.setTabText(
+            self.tabWidgetModel2.indexOf(self.tab_3), _translate("MainWindow", "Output")
+        )
         self.lblStimAmp2.setText(_translate("MainWindow", "Amplitude (%):"))
         self.lblRate2.setText(_translate("MainWindow", "Rate (bpm):"))
-        self.lblSettingsStimulus2.setText(_translate("MainWindow", "Stimulus properties:"))
+        self.lblSettingsStimulus2.setText(
+            _translate("MainWindow", "Stimulus properties:")
+        )
         self.lblStimDur2.setText(_translate("MainWindow", "Duration (ms):"))
         self.lblPrepacing2.setText(_translate("MainWindow", "Prepacing (# beats):"))
-        self.lblCao2.setText(_translate("MainWindow", "<html><head/><body><p>[Ca<span style=\" vertical-align:super;\">2+</span>] (mmol/l):</p></body></html>"))
+        self.lblCao2.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p>[Ca<span style=" vertical-align:super;">2+</span>] (mmol/l):</p></body></html>',
+            )
+        )
         self.checks1s2_mdl2.setText(_translate("MainWindow", "Run S1S2 protocol"))
-        self.lblNao2.setText(_translate("MainWindow", "<html><head/><body><p>[Na<span style=\" vertical-align:super;\">+</span>] (mmol/l): </p></body></html>"))
-        self.lblSettingsExtracellular2.setText(_translate("MainWindow", "Extracellular conditions:"))
-        self.lblKo2.setText(_translate("MainWindow", "<html><head/><body><p>[K<span style=\" vertical-align:super;\">+</span>] (mmol/l):</p></body></html>"))
+        self.lblNao2.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p>[Na<span style=" vertical-align:super;">+</span>] (mmol/l): </p></body></html>',
+            )
+        )
+        self.lblSettingsExtracellular2.setText(
+            _translate("MainWindow", "Extracellular conditions:")
+        )
+        self.lblKo2.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p>[K<span style=" vertical-align:super;">+</span>] (mmol/l):</p></body></html>',
+            )
+        )
         self.lblShowbeats2.setText(_translate("MainWindow", "Output (# beats):"))
         self.txtRateModel2.setText(_translate("MainWindow", "60"))
         self.label_7.setText(_translate("MainWindow", "S1S2 intervals (ms):"))
-        self.txtS1S2IntervalsModel2.setText(_translate("MainWindow", "100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,320,340,360,380,400,420,440,460,480,520,560"))
-        self.label_6.setText(_translate("MainWindow", "= Insert single value (60) or multiple values (60, 90, 120, 180, ...) ="))
-        self.label_8.setText(_translate("MainWindow", "= Insert multiple values (130, 140, 150, 200, 300, ...) ="))
-        self.tabWidgetModel2.setTabText(self.tabWidgetModel2.indexOf(self.tab_4), _translate("MainWindow", "Settings"))
-        self.label_12.setText(_translate("MainWindow", "Save generated plots into CSV file:"))
+        self.txtS1S2IntervalsModel2.setText(
+            _translate(
+                "MainWindow",
+                "100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,320,340,360,380,400,420,440,460,480,520,560",
+            )
+        )
+        self.label_6.setText(
+            _translate(
+                "MainWindow",
+                "= Insert single value (60) or multiple values (60, 90, 120, 180, ...) =",
+            )
+        )
+        self.label_8.setText(
+            _translate(
+                "MainWindow",
+                "= Insert multiple values (130, 140, 150, 200, 300, ...) =",
+            )
+        )
+        self.tabWidgetModel2.setTabText(
+            self.tabWidgetModel2.indexOf(self.tab_4),
+            _translate("MainWindow", "Settings"),
+        )
+        self.label_12.setText(
+            _translate("MainWindow", "Save generated plots into CSV file:")
+        )
         self.export_2.setText(_translate("MainWindow", "Export Plot(s)"))
         self.label_15.setText(_translate("MainWindow", "Notes:"))
         self.label_16.setText(_translate("MainWindow", "Generated file is listed as: "))
-        self.label_27.setText(_translate("MainWindow", "Time // Reference // Time // AAD[1] // Time // AAD[2]"))
-        self.label_10.setText(_translate("MainWindow", "MANTA is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."))
-        self.tabWidgetModel2.setTabText(self.tabWidgetModel2.indexOf(self.tab_8), _translate("MainWindow", "Export"))
+        self.label_27.setText(
+            _translate(
+                "MainWindow", "Time // Reference // Time // AAD[1] // Time // AAD[2]"
+            )
+        )
+        self.label_10.setText(
+            _translate(
+                "MainWindow",
+                "MANTA is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+            )
+        )
+        self.tabWidgetModel2.setTabText(
+            self.tabWidgetModel2.indexOf(self.tab_8), _translate("MainWindow", "Export")
+        )
+
 
 from . import MatplotlibWidget5
 from . import Resource_rc5
 
 if __name__ == "__main__":
     import sys
+
     app = QtGui.QApplication(sys.argv)
     MainWindow = QtGui.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
